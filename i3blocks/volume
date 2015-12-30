@@ -1,0 +1,12 @@
+#!/bin/sh
+
+volume="$(exec amixer -D pulse get Master | grep -o '\[.*%\]' -m 1 | sed 's/\[//g' | sed 's/\]//g')"
+mute="$(exec amixer -D pulse get Master | grep -o '\[o.*\]' -m 1  | sed 's/\[//g' | sed 's/\]//g')"
+
+
+if [ "$mute" != "off" ]; then
+  echo $volume
+  exit 0
+fi
+
+echo "$volume muted"

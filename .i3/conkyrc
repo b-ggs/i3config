@@ -1,0 +1,68 @@
+background        no
+out_to_console    yes
+out_to_x    no
+update_interval   1
+total_run_times   0
+short_units   yes pad_percents    3
+
+override_utf8_locale yes
+
+TEXT
+,[
+
+#Shows current CPU usage with a bar
+  {
+    "full_text": " cpu [$cpu%]", 
+    "color":"\#cc6666",
+    "separator_block_width": 0,
+    "separator": false
+  },
+
+#Shows current memory usage with a bar
+  {
+    "full_text": " ram [$mem/$memmax]", 
+    "color":"\#b5bd68",
+    "separator_block_width": 0,
+    "separator": false
+  },
+
+#network test
+  {
+    "full_text": " ${exec ~/i3blocks/network_unified}${exec ~/i3blocks/network_monitor}]",
+    "color":"\#f0c674",
+    "separator_block_width": 0,
+    "separator": false
+  },
+
+#Finds current volume. May need modified depending on your setup
+  {
+    "full_text": " vol [${exec ~/i3blocks/volume}]",
+    "color":"\#81a2be",
+    "separator_block_width": 0,
+    "separator": false
+  },
+
+#Shows current brightness 
+  {
+    "full_text": " brg [${exec ~/i3blocks/brightness}]",
+    "color":"\#b294bb",
+    "separator_block_width": 0,
+    "separator": false
+  },
+
+#Battery
+  {
+    "full_text": " ${exec ~/i3blocks/battery}",
+    "color": "\#8abeb7",
+    "separator_block_width": 0,
+    "separator": false
+  },
+
+#Shows time
+  {
+    "full_text": " time [${time %a %d %b} ${time %H:%M:%S}]",
+    "color": "\#c5c8c6",
+    "separator_block_width": 0,
+    "separator": false
+  }
+]
