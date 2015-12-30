@@ -13,3 +13,10 @@ Create symlinks to `~` using the script provided.
 ```
 ./bootstrap.sh
 ```
+
+## Screenshots
+![Screenfetch][screenfetch]
+![Fake busy][fakebusy]
+
+[screenfetch]: https://github.com/b-ggs/i3config/raw/master/images/1.jpg
+[fakebusy]: https://github.com/b-ggs/i3config/raw/master/images/2.png
